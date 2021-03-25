@@ -215,7 +215,7 @@ local function register_wires()
 			walkable = false,
 			drop = "mesecons:wire_00000000_off",
 			mesecon_wire = true,
-			sounds = default.node_sound_defaults(),
+			sounds = hades_sounds.node_sound_defaults(),
 			on_rotate = false,
 		}, {tiles = tiles_off, mesecons = meseconspec_off, groups = groups_off},
 		{tiles = tiles_on, mesecons = meseconspec_on, groups = groups_on})
@@ -231,20 +231,20 @@ register_wires()
 minetest.register_craft({
 	type = "cooking",
 	output = "mesecons:wire_00000000_off 2",
-	recipe = "default:mese_crystal_fragment",
+	recipe = "hades_core:mese_crystal_fragment",
 	cooktime = 3,
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "mesecons:wire_00000000_off 18",
-	recipe = "default:mese_crystal",
+	recipe = "hades_core:mese_crystal",
 	cooktime = 15,
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "mesecons:wire_00000000_off 162",
-	recipe = "default:mese",
+	recipe = "hades_core:mese",
 	cooktime = 30,
 })

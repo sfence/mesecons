@@ -68,7 +68,7 @@ local def = {
 	sunlight_propagates = true,
 	is_ground_content = false,
 	delayer_time = delaytime[i],
-	sounds = default.node_sound_stone_defaults(),
+	sounds = hades_sounds.node_sound_stone_defaults(),
 	on_blast = mesecon.on_blastnode,
 	drop = "mesecons_delayer:delayer_off_1",
 }
@@ -168,6 +168,6 @@ minetest.register_craft({
 	output = "mesecons_delayer:delayer_off_1",
 	recipe = {
 		{"mesecons_torch:mesecon_torch_on", "group:mesecon_conductor_craftable", "mesecons_torch:mesecon_torch_on"},
-		{"default:cobble","default:cobble", "default:cobble"},
+		{"hades_core:cobble","hades_core:cobble", "hades_core:cobble"},
 	}
 })

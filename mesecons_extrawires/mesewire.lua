@@ -8,22 +8,27 @@ local mesewire_rules =
 	{x = 0, y = 0, z =-1},
 }
 
-minetest.override_item("default:mese", {
-	mesecons = {conductor = {
-		state = mesecon.state.off,
-		onstate = "mesecons_extrawires:mese_powered",
-		rules = mesewire_rules
-	}}
+minetest.register_node(":hades_core:mese", {
+  description = "Mese Block",
+  tiles = {minetest.registered_nodes["hades_core:mese"].tiles[1]},
+  is_ground_content = true,
+  groups = {cracky=1},
+  sounds = hades_sounds.node_sound_stone_defaults(),
+  mesecons = {conductor = {
+    state = mesecon.state.off,
+    onstate = "mesecons_extrawires:mese_powered",
+    rules = mesewire_rules
+  }}
 })
 
 -- Copy node definition of powered mese from normal mese
 -- and brighten texture tiles to indicate mese is powered
-local powered_def = mesecon.merge_tables(minetest.registered_nodes["default:mese"], {
-	drop = "default:mese",
+local powered_def = mesecon.merge_tables(minetest.registered_nodes["hades_core:mese"], {
+	drop = "hades_core:mese",
 	light_source = 5,
 	mesecons = {conductor = {
 		state = mesecon.state.on,
-		offstate = "default:mese",
+		offstate = "hades_core:mese",
 		rules = mesewire_rules
 	}},
 	groups = {cracky = 1, not_in_creative_inventory = 1},

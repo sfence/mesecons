@@ -12,7 +12,7 @@ minetest.register_node("mesecons_noteblock:noteblock", {
 		mesecon.noteblock_play(pos, node.param2)
 		minetest.set_node(pos, node)
 	end,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	mesecons = {effector = { -- play sound when activated
 		action_on = function(pos, node)
 			mesecon.noteblock_play(pos, node.param2)
@@ -25,7 +25,7 @@ minetest.register_craft({
 	output = "mesecons_noteblock:noteblock 1",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
-		{"group:mesecon_conductor_craftable", "default:steel_ingot", "group:mesecon_conductor_craftable"},
+		{"group:mesecon_conductor_craftable", "hades_core:steel_ingot", "group:mesecon_conductor_craftable"},
 		{"group:wood", "group:wood", "group:wood"},
 	}
 })
@@ -47,12 +47,12 @@ local soundnames = {
 }
 
 local node_sounds = {
-	["default:lava_source"] = "fire_fire",
-	["default:chest"] = "mesecons_noteblock_snare",
-	["default:chest_locked"] = "mesecons_noteblock_snare",
-	["default:coalblock"] = "tnt_explode",
-	["default:glass"] = "mesecons_noteblock_hihat",
-	["default:obsidian_glass"] = "mesecons_noteblock_hihat",
+	["hades_core:lava_source"] = "hades_fire_fire",
+	["hades_chests:chest"] = "mesecons_noteblock_snare",
+	["hades_chests:chest_locked"] = "mesecons_noteblock_snare",
+	["hades_core:coalblock"] = "hades_tnt_explode",
+	["hades_core:glass"] = "mesecons_noteblock_hihat",
+	["hades_core:obsidian_glass"] = "mesecons_noteblock_hihat",
 }
 
 local node_sounds_group = {
@@ -80,12 +80,12 @@ mesecon.noteblock_play = function(pos, param2)
 			minetest.log("error", "[mesecons_noteblock] No soundname found, test param2")
 			return
 		end
-		if nodeunder == "default:steelblock" then
+		if nodeunder == "hades_core:steelblock" then
 			soundname = soundname.. 2
 		end
 	end
 	pos.y = pos.y+1
-	if soundname == "fire_fire" then
+	if soundname == "hades_fire_fire" then
 		-- Smoothly fade out fire sound
 		local handle = minetest.sound_play(soundname, {pos = pos, loop = true})
 		minetest.after(3.0, minetest.sound_fade, handle, -1.5, 0.0)

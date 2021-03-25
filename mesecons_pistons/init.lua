@@ -279,7 +279,7 @@ minetest.register_node("mesecons_pistons:piston_normal_off", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	after_place_node = piston_orientate,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	mesecons = {effector={
 		action_on = piston_on,
 		rules = piston_get_rules,
@@ -309,7 +309,7 @@ minetest.register_node("mesecons_pistons:piston_normal_on", {
 	after_dig_node = piston_after_dig,
 	node_box = piston_on_box,
 	selection_box = piston_on_box,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	mesecons = {effector={
 		action_off = piston_off,
 		rules = piston_get_rules,
@@ -339,7 +339,7 @@ minetest.register_node("mesecons_pistons:piston_pusher_normal", {
 	node_box = piston_pusher_box,
 	on_rotate = piston_rotate_pusher,
 	drop = "",
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 })
 
 -- Sticky ones
@@ -358,7 +358,7 @@ minetest.register_node("mesecons_pistons:piston_sticky_off", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	after_place_node = piston_orientate,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	mesecons = {effector={
 		action_on = piston_on,
 		rules = piston_get_rules,
@@ -388,7 +388,7 @@ minetest.register_node("mesecons_pistons:piston_sticky_on", {
 	after_dig_node = piston_after_dig,
 	node_box = piston_on_box,
 	selection_box = piston_on_box,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	mesecons = {effector={
 		action_off = piston_off,
 		rules = piston_get_rules,
@@ -418,7 +418,7 @@ minetest.register_node("mesecons_pistons:piston_pusher_sticky", {
 	node_box = piston_pusher_box,
 	on_rotate = piston_rotate_pusher,
 	drop = "",
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 })
 
 
@@ -485,8 +485,8 @@ minetest.register_craft({
 	output = "mesecons_pistons:piston_normal_off 2",
 	recipe = {
 		{"group:wood",     "group:wood",                        "group:wood"},
-		{"default:cobble", "default:steel_ingot",               "default:cobble"},
-		{"default:cobble", "group:mesecon_conductor_craftable", "default:cobble"},
+		{"hades_core:cobble", "hades_core:steel_ingot",               "hades_core:cobble"},
+		{"hades_core:cobble", "group:mesecon_conductor_craftable", "hades_core:cobble"},
 	}
 })
 

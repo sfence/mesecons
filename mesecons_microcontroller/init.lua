@@ -139,7 +139,7 @@ minetest.register_node(nodename, {
 		yc.reset (pos)
 		yc.update(pos)
 	end,
-	sounds = default.node_sound_stone_defaults(),
+	sounds = hades_sounds.node_sound_stone_defaults(),
 	mesecons = mesecons,
 	after_dig_node = function (pos, node)
 		rules = microc_rules[node.name]

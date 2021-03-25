@@ -96,7 +96,7 @@ mesecon.register_pressure_plate(
 	"jeija_pressure_plate_wood_inv.png",
 	{{"group:wood", "group:wood"}},
 	{ choppy = 3, oddly_breakable_by_hand = 3 },
-	default.node_sound_wood_defaults())
+	hades_sounds.node_sound_wood_defaults())
 
 mesecon.register_pressure_plate(
 	"mesecons_pressureplates:pressure_plate_stone",
@@ -105,6 +105,6 @@ mesecon.register_pressure_plate(
 	{"jeija_pressure_plate_stone_on.png","jeija_pressure_plate_stone_on.png","jeija_pressure_plate_stone_on_edges.png"},
 	"jeija_pressure_plate_stone_wield.png",
 	"jeija_pressure_plate_stone_inv.png",
-	{{"default:cobble", "default:cobble"}},
+	{{"hades_core:cobble", "hades_core:cobble"}},
 	{ cracky = 3, oddly_breakable_by_hand = 3 },
-	default.node_sound_stone_defaults())
+	hades_sounds.node_sound_stone_defaults())
