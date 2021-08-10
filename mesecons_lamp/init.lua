@@ -9,7 +9,7 @@ local mesecon_lamp_box = {
 	wall_side = {-0.375,-0.3125,-0.3125,-0.5,0.3125,0.3125},
 }
 
-minetest.register_node("mesecons_lamp:lamp_on", {
+minetest.register_node(":mesecons_lamp:lamp_on", {
 	drawtype = "nodebox",
 	tiles = {"jeija_meselamp_on.png"},
 	paramtype = "light",
@@ -33,7 +33,7 @@ minetest.register_node("mesecons_lamp:lamp_on", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_lamp:lamp_off", {
+minetest.register_node(":mesecons_lamp:lamp_off", {
 	drawtype = "nodebox",
 	tiles = {"jeija_meselamp_off.png"},
 	inventory_image = "jeija_meselamp.png",

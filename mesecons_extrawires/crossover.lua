@@ -18,7 +18,7 @@ local crossover_states = {
 	"mesecons_extrawires:crossover_on",
 }
 
-minetest.register_node("mesecons_extrawires:crossover_off", {
+minetest.register_node(":mesecons_extrawires:crossover_off", {
 	description = "Insulated Mesecon Crossover",
 	drawtype = "mesh",
 	mesh = "mesecons_extrawires_crossover.b3d",
@@ -44,7 +44,7 @@ minetest.register_node("mesecons_extrawires:crossover_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_extrawires:crossover_01", {
+minetest.register_node(":mesecons_extrawires:crossover_01", {
 	description = "You hacker you!",
 	drop = "mesecons_extrawires:crossover_off",
 	drawtype = "mesh",
@@ -71,7 +71,7 @@ minetest.register_node("mesecons_extrawires:crossover_01", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_extrawires:crossover_10", {
+minetest.register_node(":mesecons_extrawires:crossover_10", {
 	description = "You hacker you!",
 	drop = "mesecons_extrawires:crossover_off",
 	drawtype = "mesh",
@@ -98,7 +98,7 @@ minetest.register_node("mesecons_extrawires:crossover_10", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_extrawires:crossover_on", {
+minetest.register_node(":mesecons_extrawires:crossover_on", {
 	description = "You hacker you!",
 	drop = "mesecons_extrawires:crossover_off",
 	drawtype = "mesh",

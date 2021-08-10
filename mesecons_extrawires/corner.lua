@@ -17,7 +17,7 @@ local corner_get_rules = function (node)
 	return rules
 end
 
-minetest.register_node("mesecons_extrawires:corner_on", {
+minetest.register_node(":mesecons_extrawires:corner_on", {
 	drawtype = "mesh",
 	mesh = "mesecons_extrawires_corner.obj",
 	tiles = {
@@ -43,7 +43,7 @@ minetest.register_node("mesecons_extrawires:corner_on", {
 	on_rotate = screwdriver_exists and screwdriver.rotate_simple,
 })
 
-minetest.register_node("mesecons_extrawires:corner_off", {
+minetest.register_node(":mesecons_extrawires:corner_off", {
 	drawtype = "mesh",
 	description = "Insulated Mesecon Corner",
 	mesh = "mesecons_extrawires_corner.obj",

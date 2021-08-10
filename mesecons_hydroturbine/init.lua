@@ -3,7 +3,7 @@
 -- Active if flowing >water< above it
 -- (does not work with other liquids)
 
-minetest.register_node("mesecons_hydroturbine:hydro_turbine_off", {
+minetest.register_node(":mesecons_hydroturbine:hydro_turbine_off", {
 	drawtype = "mesh",
 	mesh = "jeija_hydro_turbine_off.obj",
 	tiles = {
@@ -29,7 +29,7 @@ minetest.register_node("mesecons_hydroturbine:hydro_turbine_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_hydroturbine:hydro_turbine_on", {
+minetest.register_node(":mesecons_hydroturbine:hydro_turbine_on", {
 	drawtype = "mesh",
 	is_ground_content = false,
 	mesh = "jeija_hydro_turbine_on.obj",

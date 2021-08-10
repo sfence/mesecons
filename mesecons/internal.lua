@@ -46,7 +46,10 @@
 -- mesecon.rotate_rules_down(rules)
 -- These functions return rules that have been rotated in the specific direction
 
-local fifo_queue = dofile(minetest.get_modpath("mesecons").."/fifo_queue.lua")
+local modname = minetest.get_current_modname()
+local modpath = minetest.get_modpath(modname)
+
+local fifo_queue = dofile(modpath.."/fifo_queue.lua")
 
 -- General
 function mesecon.get_effector(nodename)

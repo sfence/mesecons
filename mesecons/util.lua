@@ -264,8 +264,8 @@ function mesecon.register_node(name, spec_common, spec_off, spec_on)
 	spec_on = mesecon.merge_tables(spec_common, spec_on);
 	spec_off = mesecon.merge_tables(spec_common, spec_off);
 
-	minetest.register_node(name .. "_on", spec_on)
-	minetest.register_node(name .. "_off", spec_off)
+	minetest.register_node(":" .. name .. "_on", spec_on)
+	minetest.register_node(":" .. name .. "_off", spec_off)
 end
 
 -- swap onstate and offstate nodes, returns new state

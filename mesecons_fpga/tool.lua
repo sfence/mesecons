@@ -1,7 +1,7 @@
 return function(plg)
 
 
-minetest.register_tool("mesecons_fpga:programmer", {
+minetest.register_tool(":mesecons_fpga:programmer", {
 	description = "FPGA Programmer",
 	inventory_image = "jeija_fpga_programmer.png",
 	stack_max = 1,

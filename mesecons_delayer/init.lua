@@ -119,7 +119,7 @@ local off_state = {
 for k, v in pairs(def) do
 	off_state[k] = off_state[k] or v
 end
-minetest.register_node("mesecons_delayer:delayer_off_"..tostring(i), off_state)
+minetest.register_node(":mesecons_delayer:delayer_off_"..tostring(i), off_state)
 
 -- Activated delayer definition defaults
 local on_state = {
@@ -160,7 +160,7 @@ local on_state = {
 for k, v in pairs(def) do
 	on_state[k] = on_state[k] or v
 end
-minetest.register_node("mesecons_delayer:delayer_on_"..tostring(i), on_state)
+minetest.register_node(":mesecons_delayer:delayer_on_"..tostring(i), on_state)
 
 end
 

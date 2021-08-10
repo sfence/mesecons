@@ -25,7 +25,7 @@ local tjunction_get_rules = function (node)
 	return rules
 end
 
-minetest.register_node("mesecons_extrawires:tjunction_on", {
+minetest.register_node(":mesecons_extrawires:tjunction_on", {
 	drawtype = "nodebox",
 	tiles = {
 		"jeija_insulated_wire_tjunction_tb_on.png",
@@ -55,7 +55,7 @@ minetest.register_node("mesecons_extrawires:tjunction_on", {
 	on_rotate = screwdriver_exists and screwdriver.rotate_simple,
 })
 
-minetest.register_node("mesecons_extrawires:tjunction_off", {
+minetest.register_node(":mesecons_extrawires:tjunction_off", {
 	drawtype = "nodebox",
 	description = "Insulated Mesecon T-junction",
 	tiles = {

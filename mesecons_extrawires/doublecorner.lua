@@ -43,7 +43,7 @@ for k, state in ipairs(doublecorner_states) do
 	local w2 = wire2_states[k]
 	local groups =  { dig_immediate = 3 }
 	if k ~= 1 then groups.not_in_creative_inventory = 1 end
-	minetest.register_node(state, {
+	minetest.register_node(":"..state, {
 		drawtype = "mesh",
 		mesh = "mesecons_extrawires_doublecorner.obj",
 		description = "Insulated Mesecon Double Corner",

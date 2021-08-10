@@ -18,7 +18,7 @@ function mesecon.lightstone_add(name, base_item, texture_off, texture_on, desc)
 	if not desc then
 		desc = name .. " Lightstone"
 	end
-	minetest.register_node("mesecons_lightstone:lightstone_" .. name .. "_off", {
+	minetest.register_node(":mesecons_lightstone:lightstone_" .. name .. "_off", {
 		tiles = {texture_off},
 		is_ground_content = false,
 		groups = {cracky = 2, mesecon_effector_off = 1, mesecon = 2},
@@ -32,7 +32,7 @@ function mesecon.lightstone_add(name, base_item, texture_off, texture_on, desc)
 		}},
 		on_blast = mesecon.on_blastnode,
 	})
-	minetest.register_node("mesecons_lightstone:lightstone_" .. name .. "_on", {
+	minetest.register_node(":mesecons_lightstone:lightstone_" .. name .. "_on", {
 		tiles = {texture_on},
 		is_ground_content = false,
 		groups = {cracky = 2, not_in_creative_inventory = 1, mesecon = 2},

@@ -9,7 +9,7 @@ local ground_dir = {
 
 minetest.register_lbm({
 	label = "Upgrade legacy pistons pointing up",
-	name = "mesecons_pistons:replace_legacy_piston_up",
+	name = "hades_mesecons_pistons:replace_legacy_piston_up",
 	nodenames = {
 		"mesecons_pistons:piston_up_normal_off",
 		"mesecons_pistons:piston_up_normal_on",
@@ -29,7 +29,7 @@ minetest.register_lbm({
 
 minetest.register_lbm({
 	label = "Upgrade legacy pistons pointing down",
-	name = "mesecons_pistons:replace_legacy_piston_down",
+	name = "hades_mesecons_pistons:replace_legacy_piston_down",
 	nodenames = {
 		"mesecons_pistons:piston_down_normal_off",
 		"mesecons_pistons:piston_down_normal_on",

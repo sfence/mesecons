@@ -1,6 +1,8 @@
-dofile(minetest.get_modpath("mesecons_extrawires").."/crossover.lua");
-dofile(minetest.get_modpath("mesecons_extrawires").."/tjunction.lua");
-dofile(minetest.get_modpath("mesecons_extrawires").."/corner.lua");
-dofile(minetest.get_modpath("mesecons_extrawires").."/doublecorner.lua");
-dofile(minetest.get_modpath("mesecons_extrawires").."/vertical.lua");
-dofile(minetest.get_modpath("mesecons_extrawires").."/mesewire.lua");
+local modpath = minetest.get_modpath(minetest.get_current_modname())
+
+dofile(modpath.."/crossover.lua");
+dofile(modpath.."/tjunction.lua");
+dofile(modpath.."/corner.lua");
+dofile(modpath.."/doublecorner.lua");
+dofile(modpath.."/vertical.lua");
+dofile(modpath.."/mesewire.lua");

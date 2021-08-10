@@ -9,7 +9,7 @@ local function insulated_wire_get_rules(node)
 	return rules
 end
 
-minetest.register_node("mesecons_insulated:insulated_on", {
+minetest.register_node(":mesecons_insulated:insulated_on", {
 	drawtype = "nodebox",
 	description = "Straight Insulated Mesecon",
 	tiles = {
@@ -46,7 +46,7 @@ minetest.register_node("mesecons_insulated:insulated_on", {
 	on_rotate = screwdriver_exists and screwdriver.rotate_simple,
 })
 
-minetest.register_node("mesecons_insulated:insulated_off", {
+minetest.register_node(":mesecons_insulated:insulated_off", {
 	drawtype = "nodebox",
 	description = "Straight Insulated Mesecon",
 	tiles = {

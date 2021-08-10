@@ -113,7 +113,7 @@ function mesecon.register_movestone(name, def, is_sticky, is_vertical)
 
 	def.on_blast = mesecon.on_blastnode
 
-	minetest.register_node(name, def)
+	minetest.register_node(":"..name, def)
 end
 
 

@@ -55,7 +55,7 @@ if nodename ~= "mesecons_microcontroller:microcontroller0000" then
 	}
 end
 
-minetest.register_node(nodename, {
+minetest.register_node(":"..nodename, {
 	description = "Microcontroller",
 	drawtype = "nodebox",
 	tiles = {

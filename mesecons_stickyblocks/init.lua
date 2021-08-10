@@ -2,7 +2,7 @@
 -- structures that are "glued" together using sticky blocks
 
 -- All sides sticky block
-minetest.register_node("mesecons_stickyblocks:sticky_block_all", {
+minetest.register_node(":mesecons_stickyblocks:sticky_block_all", {
 	-- TODO: Rename to “All-Faces Sticky Block” when other sticky blocks become available
 	description = "Sticky Block",
 	tiles = {"mesecons_stickyblocks_sticky.png"},

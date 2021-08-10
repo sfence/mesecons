@@ -51,7 +51,7 @@ plg.register_nodes = function(template)
 			}
 		end
 
-		minetest.register_node(nodename, ndef)
+		minetest.register_node(":"..nodename, ndef)
 	end
 	end
 	end

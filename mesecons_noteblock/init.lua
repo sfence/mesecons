@@ -1,4 +1,4 @@
-minetest.register_node("mesecons_noteblock:noteblock", {
+minetest.register_node(":mesecons_noteblock:noteblock", {
 	description = "Noteblock",
 	tiles = {"mesecons_noteblock.png"},
 	is_ground_content = false,

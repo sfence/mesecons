@@ -63,7 +63,7 @@ local object_detector_digiline = {
 	}
 }
 
-minetest.register_node("mesecons_detector:object_detector_off", {
+minetest.register_node(":mesecons_detector:object_detector_off", {
 	tiles = {"default_steel_block.png", "default_steel_block.png", "jeija_object_detector_off.png", "jeija_object_detector_off.png", "jeija_object_detector_off.png", "jeija_object_detector_off.png"},
 	paramtype = "light",
 	is_ground_content = false,
@@ -81,7 +81,7 @@ minetest.register_node("mesecons_detector:object_detector_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_detector:object_detector_on", {
+minetest.register_node(":mesecons_detector:object_detector_on", {
 	tiles = {"default_steel_block.png", "default_steel_block.png", "jeija_object_detector_on.png", "jeija_object_detector_on.png", "jeija_object_detector_on.png", "jeija_object_detector_on.png"},
 	paramtype = "light",
 	is_ground_content = false,
@@ -255,7 +255,7 @@ local function after_place_node_detector(pos, placer)
 	minetest.set_node(pos, node)
 end
 
-minetest.register_node("mesecons_detector:node_detector_off", {
+minetest.register_node(":mesecons_detector:node_detector_off", {
 	tiles = {"default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "jeija_node_detector_off.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -273,7 +273,7 @@ minetest.register_node("mesecons_detector:node_detector_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_detector:node_detector_on", {
+minetest.register_node(":mesecons_detector:node_detector_on", {
 	tiles = {"default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "default_steel_block.png", "jeija_node_detector_on.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",

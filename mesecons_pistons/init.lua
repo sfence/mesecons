@@ -265,7 +265,7 @@ local piston_on_box = {
 
 -- Normal (non-sticky) Pistons:
 -- offstate
-minetest.register_node("mesecons_pistons:piston_normal_off", {
+minetest.register_node(":mesecons_pistons:piston_normal_off", {
 	description = "Piston",
 	tiles = {
 		"mesecons_piston_top.png",
@@ -290,7 +290,7 @@ minetest.register_node("mesecons_pistons:piston_normal_off", {
 })
 
 -- onstate
-minetest.register_node("mesecons_pistons:piston_normal_on", {
+minetest.register_node(":mesecons_pistons:piston_normal_on", {
 	description = "Activated Piston Base",
 	drawtype = "nodebox",
 	tiles = {
@@ -319,7 +319,7 @@ minetest.register_node("mesecons_pistons:piston_normal_on", {
 })
 
 -- pusher
-minetest.register_node("mesecons_pistons:piston_pusher_normal", {
+minetest.register_node(":mesecons_pistons:piston_pusher_normal", {
 	description = "Piston Pusher",
 	drawtype = "nodebox",
 	tiles = {
@@ -344,7 +344,7 @@ minetest.register_node("mesecons_pistons:piston_pusher_normal", {
 
 -- Sticky ones
 -- offstate
-minetest.register_node("mesecons_pistons:piston_sticky_off", {
+minetest.register_node(":mesecons_pistons:piston_sticky_off", {
 	description = "Sticky Piston",
 	tiles = {
 		"mesecons_piston_top.png",
@@ -369,7 +369,7 @@ minetest.register_node("mesecons_pistons:piston_sticky_off", {
 })
 
 -- onstate
-minetest.register_node("mesecons_pistons:piston_sticky_on", {
+minetest.register_node(":mesecons_pistons:piston_sticky_on", {
 	description = "Activated Sticky Piston Base",
 	drawtype = "nodebox",
 	tiles = {
@@ -398,7 +398,7 @@ minetest.register_node("mesecons_pistons:piston_sticky_on", {
 })
 
 -- pusher
-minetest.register_node("mesecons_pistons:piston_pusher_sticky", {
+minetest.register_node(":mesecons_pistons:piston_pusher_sticky", {
 	description = "Sticky Piston Pusher",
 	drawtype = "nodebox",
 	tiles = {
@@ -500,4 +500,4 @@ minetest.register_craft({
 
 
 -- load legacy code
-dofile(minetest.get_modpath("mesecons_pistons")..DIR_DELIM.."legacy.lua")
+dofile(minetest.get_modpath("hades_mesecons_pistons")..DIR_DELIM.."legacy.lua")

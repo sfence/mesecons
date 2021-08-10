@@ -1,6 +1,6 @@
 -- REMOVESTONE
 
-minetest.register_node("mesecons_random:removestone", {
+minetest.register_node(":mesecons_random:removestone", {
 	tiles = {"jeija_removestone.png"},
 	is_ground_content = false,
 	inventory_image = minetest.inventorycube("jeija_removestone_inv.png"),
@@ -28,7 +28,7 @@ minetest.register_craft({
 
 -- GHOSTSTONE
 
-minetest.register_node("mesecons_random:ghoststone", {
+minetest.register_node(":mesecons_random:ghoststone", {
 	description="Ghoststone",
 	tiles = {"jeija_ghoststone.png"},
 	is_ground_content = false,
@@ -43,7 +43,7 @@ minetest.register_node("mesecons_random:ghoststone", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_random:ghoststone_active", {
+minetest.register_node(":mesecons_random:ghoststone_active", {
 	drawtype = "airlike",
 	pointable = false,
 	walkable = false,

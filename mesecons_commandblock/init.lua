@@ -179,7 +179,7 @@ local function can_dig(pos, player)
 		minetest.check_player_privs(player, "protection_bypass")
 end
 
-minetest.register_node("mesecons_commandblock:commandblock_off", {
+minetest.register_node(":mesecons_commandblock:commandblock_off", {
 	description = "Command Block",
 	tiles = {"jeija_commandblock_off.png"},
 	inventory_image = minetest.inventorycube("jeija_commandblock_off.png"),
@@ -196,7 +196,7 @@ minetest.register_node("mesecons_commandblock:commandblock_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_commandblock:commandblock_on", {
+minetest.register_node(":mesecons_commandblock:commandblock_on", {
 	tiles = {"jeija_commandblock_on.png"},
 	is_ground_content = false,
 	groups = {cracky=2, mesecon_effector_on=1, not_in_creative_inventory=1},

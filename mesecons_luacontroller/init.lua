@@ -839,7 +839,7 @@ for d = 0, 1 do
 		},
 	}
 
-	minetest.register_node(node_name, {
+	minetest.register_node(":"..node_name, {
 		description = "Luacontroller",
 		drawtype = "nodebox",
 		tiles = {
@@ -888,7 +888,7 @@ end
 -- Overheated Luacontroller --
 ------------------------------
 
-minetest.register_node(BASENAME .. "_burnt", {
+minetest.register_node(":"..BASENAME .. "_burnt", {
 	drawtype = "nodebox",
 	tiles = {
 		"jeija_luacontroller_burnt_top.png",

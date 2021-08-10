@@ -13,7 +13,7 @@ mesecon.button_turnoff = function (pos)
 	mesecon.receptor_off(pos, rules)
 end
 
-minetest.register_node("mesecons_button:button_off", {
+minetest.register_node(":mesecons_button:button_off", {
 	drawtype = "nodebox",
 	tiles = {
 	"jeija_wall_button_sides.png",
@@ -57,7 +57,7 @@ minetest.register_node("mesecons_button:button_off", {
 	on_blast = mesecon.on_blastnode,
 })
 
-minetest.register_node("mesecons_button:button_on", {
+minetest.register_node(":mesecons_button:button_on", {
 	drawtype = "nodebox",
 	tiles = {
 		"jeija_wall_button_sides.png",

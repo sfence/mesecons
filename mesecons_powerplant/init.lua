@@ -1,7 +1,7 @@
 -- The POWER_PLANT
 -- Just emits power. always.
 
-minetest.register_node("mesecons_powerplant:power_plant", {
+minetest.register_node(":mesecons_powerplant:power_plant", {
 	drawtype = "plantlike",
 	visual_scale = 1,
 	tiles = {"jeija_power_plant.png"},
