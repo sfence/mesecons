@@ -140,6 +140,8 @@ nid_inc = function (nid)
 	return i <= 8
 end
 
+local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or nil
+
 local function register_wires()
 	local nid = {}
 	while true do
@@ -207,6 +209,7 @@ local function register_wires()
 			drawtype = "nodebox",
 			inventory_image = "mesecons_wire_inv.png",
 			wield_image = "mesecons_wire_inv.png",
+			use_texture_alpha = use_texture_alpha,
 			paramtype = "light",
 			paramtype2 = "facedir",
 			is_ground_content = false,

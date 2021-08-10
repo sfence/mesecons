@@ -25,6 +25,8 @@ local up_rcvboxes = {
 	{6/16,  -8/16, 1/16,  8/16, -7/16, -1/16}, -- Plate extension (East)
 }
 
+local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or nil
+
 local receiver_get_rules = function (node)
 	local rules = {	{x =  1, y = 0, z = 0},
 			{x = -2, y = 0, z = 0}}
@@ -89,6 +91,7 @@ mesecon.register_node("mesecons_receiver:receiver", {
 
 mesecon.register_node("mesecons_receiver:receiver_up", {
 	drawtype = "nodebox",
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -134,6 +137,7 @@ mesecon.register_node("mesecons_receiver:receiver_up", {
 
 mesecon.register_node("mesecons_receiver:receiver_down", {
 	drawtype = "nodebox",
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	is_ground_content = false,

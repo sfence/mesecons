@@ -38,6 +38,8 @@ local bottom_rules = {
 	{x=0, y=2, z=0} -- receive power from pressure plate / detector / ... 2 nodes above
 }
 
+local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or nil
+
 local vertical_updatepos = function (pos)
 	local node = minetest.get_node(pos)
 	if minetest.registered_nodes[node.name]
@@ -80,6 +82,7 @@ mesecon.register_node("mesecons_extrawires:vertical", {
 	description = "Vertical Mesecon",
 	drawtype = "nodebox",
 	walkable = false,
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	is_ground_content = false,
 	sunlight_propagates = true,
@@ -113,6 +116,7 @@ mesecon.register_node("mesecons_extrawires:vertical_top", {
 	description = "Vertical mesecon",
 	drawtype = "nodebox",
 	walkable = false,
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	is_ground_content = false,
 	sunlight_propagates = true,
@@ -145,6 +149,7 @@ mesecon.register_node("mesecons_extrawires:vertical_bottom", {
 	description = "Vertical mesecon",
 	drawtype = "nodebox",
 	walkable = false,
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	is_ground_content = false,
 	sunlight_propagates = true,
