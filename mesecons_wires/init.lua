@@ -140,7 +140,7 @@ nid_inc = function (nid)
 	return i <= 8
 end
 
-local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or nil
+local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "clip" or nil
 
 local function register_wires()
 	local nid = {}
