@@ -26,6 +26,8 @@ minetest.register_craft({
 })
 
 -- Silicon
+minetest.register_alias("mesecons_materials:silicon", "hades_materials:silicon")
+--[[
 minetest.register_craftitem(":mesecons_materials:silicon", {
 	image = "mesecons_silicon.png",
 	on_place_on_ground = minetest.craftitem_place_item,
@@ -35,7 +37,8 @@ minetest.register_craftitem(":mesecons_materials:silicon", {
 minetest.register_craft({
 	output = "mesecons_materials:silicon 4",
 	recipe = {
-		{"hades_core:fertile_sand", "hades_core:fertile_sand"},
-		{"hades_core:fertile_sand", "hades_core:steel_ingot"},
+		{"hades_core:volcanic_sand", "hades_core:volcanic_sand"},
+		{"hades_core:volcanic_sand", "hades_core:steel_ingot"},
 	}
 })
+--]]
