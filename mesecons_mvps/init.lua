@@ -331,10 +331,10 @@ end
 -- TODO: load blocks instead, as with wires.
 mesecon.register_mvps_stopper("ignore")
 
-mesecon.register_mvps_stopper("doors:door_steel_b_1")
-mesecon.register_mvps_stopper("doors:door_steel_t_1")
-mesecon.register_mvps_stopper("doors:door_steel_b_2")
-mesecon.register_mvps_stopper("doors:door_steel_t_2")
+mesecon.register_mvps_stopper("hades_doors:door_steel_b_1")
+mesecon.register_mvps_stopper("hades_doors:door_steel_t_1")
+mesecon.register_mvps_stopper("hades_doors:door_steel_b_2")
+mesecon.register_mvps_stopper("hades_doors:door_steel_t_2")
 mesecon.register_mvps_stopper("hades_chests:chest_locked")
 mesecon.register_on_mvps_move(mesecon.move_hot_nodes)
 mesecon.register_on_mvps_move(function(moved_nodes)

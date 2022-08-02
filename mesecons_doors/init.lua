@@ -69,10 +69,10 @@ local function meseconify_door(name)
 	end
 end
 
-meseconify_door("doors:door_wood")
-meseconify_door("doors:door_steel")
-meseconify_door("doors:door_glass")
-meseconify_door("doors:door_obsidian_glass")
+meseconify_door("hades_doors:door_wood")
+meseconify_door("hades_doors:door_steel")
+meseconify_door("hades_doors:door_glass")
+meseconify_door("hades_doors:door_obsidian_glass")
 meseconify_door("xpanes:door_steel_bar")
 
 -- Trapdoor
@@ -81,10 +81,10 @@ local function trapdoor_switch(pos, node)
 
 	if state == 1 then
 		minetest.sound_play("doors_door_close", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
-		minetest.set_node(pos, {name="doors:trapdoor", param2 = node.param2})
+		minetest.set_node(pos, {name="hades_doors:trapdoor", param2 = node.param2})
 	else
 		minetest.sound_play("doors_door_open", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
-		minetest.set_node(pos, {name="doors:trapdoor_open", param2 = node.param2})
+		minetest.set_node(pos, {name="hades_doors:trapdoor_open", param2 = node.param2})
 	end
 
 	minetest.get_meta(pos):set_int("state", state == 1 and 0 or 1)
@@ -107,10 +107,10 @@ if doors and doors.get then
 			end,
 		}},
 	}
-	minetest.override_item("doors:trapdoor", override)
-	minetest.override_item("doors:trapdoor_open", override)
-	minetest.override_item("doors:trapdoor_steel", override)
-	minetest.override_item("doors:trapdoor_steel_open", override)
+	minetest.override_item("hades_doors:trapdoor", override)
+	minetest.override_item("hades_doors:trapdoor_open", override)
+	minetest.override_item("hades_doors:trapdoor_steel", override)
+	minetest.override_item("hades_doors:trapdoor_steel_open", override)
 
 	if minetest.registered_items["xpanes:trapdoor_steel_bar"] then
 		minetest.override_item("xpanes:trapdoor_steel_bar", override)
@@ -118,15 +118,15 @@ if doors and doors.get then
 	end
 
 else
-	if minetest.registered_nodes["doors:trapdoor"] then
-		minetest.override_item("doors:trapdoor", {
+	if minetest.registered_nodes["hades_doors:trapdoor"] then
+		minetest.override_item("hades_doors:trapdoor", {
 			mesecons = {effector = {
 				action_on = trapdoor_switch,
 				action_off = trapdoor_switch
 			}},
 		})
 
-		minetest.override_item("doors:trapdoor_open", {
+		minetest.override_item("hades_doors:trapdoor_open", {
 			mesecons = {effector = {
 				action_on = trapdoor_switch,
 				action_off = trapdoor_switch
