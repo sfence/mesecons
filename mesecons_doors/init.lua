@@ -50,13 +50,13 @@ local function meseconify_door(name)
 		local override = {
 			mesecons = {effector = {
 				action_on = function(pos, node)
-					local door = doors.get(pos)
+					local door = hades_doors.get(pos)
 					if door then
 						door:open()
 					end
 				end,
 				action_off = function(pos, node)
-					local door = doors.get(pos)
+					local door = hades_doors.get(pos)
 					if door then
 						door:close()
 					end
@@ -90,17 +90,17 @@ local function trapdoor_switch(pos, node)
 	minetest.get_meta(pos):set_int("state", state == 1 and 0 or 1)
 end
 
-if doors and doors.get then
+if hades_doors and hades_doors.get then
 	local override = {
 		mesecons = {effector = {
 			action_on = function(pos, node)
-				local door = doors.get(pos)
+				local door = hades_doors.get(pos)
 				if door then
 					door:open()
 				end
 			end,
 			action_off = function(pos, node)
-				local door = doors.get(pos)
+				local door = hades_doors.get(pos)
 				if door then
 					door:close()
 				end
